@@ -1,0 +1,21 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> PROJECT </title>
+</head>
+<body>
+    <H1> MAKING LOGIN SYSTEM </H1>
+    
+    {% if user.is_authenticated %}
+    <h2> ✔USER NAME : {{user}} </h2>
+    <a href="{% url 'logout' %}"> <h4> LOGOUT </h4></a> 
+    {% else %}
+    
+    <a href="{% url 'login' %}"> <h4> LOGIN </h4></a>  
+    <a href="{% url 'signup' %}"> <h4> SIGNUP </h4></a>    
+    {% endif %}
+</body>
+</html>
