@@ -14,8 +14,14 @@
     <a href="{% url 'logout' %}"> <h4> LOGOUT </h4></a> 
     {% else %}
     
-    <a href="{% url 'login' %}"> <h4> LOGIN </h4></a>  
+    <a href="{% url 'login' %}"> <h4> LOGIN </h4></a>
     <a href="{% url 'signup' %}"> <h4> SIGNUP </h4></a>    
+    <br>
+    {% load account %}
+    {% load socialaccount %}
+    <a href="{% provider_login_url "naver" %}"> LOGIN IN NAVER </a>
     {% endif %}
+    
+
 </body>
 </html>
